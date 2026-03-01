@@ -120,6 +120,143 @@ body {
     border-radius: 25px;
     font-weight: 600;
     transition: var(--transition);
+    border: none;
+}
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+.btn-media{
+    padding: 0.5rem 1rem;
+    margin: 1.5rem;
+}
+dialog{
+    border: none;
+    padding: 0;
+    background: none;
+}
+.modal-image {
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+/* DIALOG BASE */
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+/* BACKDROP */
+dialog::backdrop {
+  background: rgba(0,0,0,0);
+  backdrop-filter: blur(0px);
+  transition: all 0.3s ease;
+}
+
+dialog[open]::backdrop {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* MODAL */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(0.9);
+  opacity: 0;
+
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 340px;
+  text-align: center;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+dialog[open] .modal-content {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.modal-calendar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(0.9);
+  opacity: 0;
+
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 80%;
+  text-align: center;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+dialog[open] .modal-calendar {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    height: 400px;
+}
+/* GRID */
+.social-grid {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+/* BOTONES */
+.social {
+  display: block;
+  padding: 14px;
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* COLORES */
+.whatsapp { background: #25D366; }
+.email { background: #444; }
+.guruwalk { background: #FF6B35; }
+.instagram { 
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+.linkedin { background: #0077B5; }
+
+/* CERRAR */
+.close-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
 }
 
 .instagram-btn:hover {
@@ -181,7 +318,11 @@ body {
     color: var(--white);
     position: relative;
 }
-
+.hero-cta{
+    justify-content: center;
+    text-align: -webkit-center;
+    align-items: center;
+}
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -189,7 +330,11 @@ body {
     width: 100%;
     height: 100%;
     /* background: rgba(0, 0, 0, 0.3); */
-    background-image: url('../images/amsterdam-canales-puentes-hd.jpg');
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('../images/amsterdam-canales-puentes-hd.jpg');
+    background-size: cover;
+
 
 }
 
@@ -233,6 +378,49 @@ body {
 .btn-primary {
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     color: var(--white);
+}
+.btn-CTA{
+    background: linear-gradient(45deg, var(--secondary-color) 10%, #E80752 55%);
+    color: var(--white);
+    padding:1rem 2.5rem;
+}
+.btn-guru{
+    text-align: center;
+    object-fit: contain;
+}
+.hidden-text {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.visible {
+    max-height: 500px; /* suficientemente grande */
+    opacity: 1;
+    transform: translateY(0);
+    object-fit: contain;
+    background-color: rgba(38, 38, 38, 0.8);
+    border-radius: 15px;
+    margin-top: 1rem;
+    width:50%;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.link-btn{
+    background: none;
+    border: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: var(--transition);
+    text-decoration-line: underline;
 }
 
 .btn-primary:hover {
@@ -308,6 +496,12 @@ section {
     gap: 2rem;
     margin-bottom: 3rem;
 }
+.tours-grid-bottom {
+    
+    max-width: 800px;   /* limita el ancho */
+    margin: 0 auto;     /* centra el bloque */
+}
+
 
 .tour-card {
     background-color: var(--white);
@@ -499,6 +693,24 @@ section {
     color: var(--primary-color);
     transform: scale(1.2);
 }
+.logo-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    z-index: 1000;
+    transition: var(--transition);
+     border-radius: 50%;
+}
+.logo-whatsapp:hover {
+    /* fill: #E1306C !important; */
+    /* box-shadow: #21c61c 0px 0px 30px 2px; */
+     filter: invert(1) sepia(1) saturate(100) hue-rotate(55deg);
+   
+    /* transition: fill 0.3s ease; */
+}
 
 /* ===================================
    Responsive Design
@@ -562,5 +774,9 @@ section {
 
     .carousel-btn-next {
         right: 0.5rem;
+    }
+    .logo-whatsapp {
+        width: 50px;
+        height: 50px;
     }
 }

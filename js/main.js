@@ -123,13 +123,27 @@ function setLanguage(lang) {
     localStorage.setItem('language', lang);
 
     // Update all elements with data attributes
+    // document.querySelectorAll('[data-en][data-es]').forEach(element => {
+    //     if (element.tagName === 'A' || element.tagName === 'BUTTON') {
+    //         element.textContent = element.getAttribute(`data-${lang}`);
+    //     } else {
+    //         element.textContent = element.getAttribute(`data-${lang}`);
+    //     }
+    // });
     document.querySelectorAll('[data-en][data-es]').forEach(element => {
-        if (element.tagName === 'A' || element.tagName === 'BUTTON') {
-            element.textContent = element.getAttribute(`data-${lang}`);
-        } else {
-            element.textContent = element.getAttribute(`data-${lang}`);
+
+    // Si el elemento tiene estructura interna
+    if (element.hasAttribute('data-structured')) {
+        const label = element.querySelector('.btn-label');
+        if (label) {
+            label.textContent = element.getAttribute(`data-${lang}`);
         }
-    });
+    } 
+    else {
+        element.textContent = element.getAttribute(`data-${lang}`);
+    }
+
+});
 
     // Update language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -156,6 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang);
     initCarousel();
 });
+
+// Make appear the deployable of the hero section
+ function toggleHeroCTA() {
+    //cambiar a otra clase para hacer una transición suave
+    const hiddenText = document.querySelector('.hidden-text');
+    if (hiddenText) {
+        hiddenText.classList.toggle('visible');
+    }
+}
 
 // ===================================
 // Carousel Gallery
@@ -228,7 +251,7 @@ function initCarousel() {
 
     // Auto-slide functionality
     function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, 4500); // Change slide every 3 seconds
+        autoSlideInterval = setInterval(nextSlide, 2500); // Change slide every 2.5 seconds
     }
 
     function stopAutoSlide() {
