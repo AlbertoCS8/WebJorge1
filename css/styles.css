@@ -182,6 +182,10 @@ dialog[open]::backdrop {
   padding: 2rem;
   border-radius: 20px;
   width: 340px;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   text-align: center;
 
   box-shadow: 0 25px 60px rgba(0,0,0,0.2);
@@ -348,6 +352,20 @@ iframe {
 }
 
 @media (max-width: 768px) {
+    .modal-content {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%) scale(0.96);
+        width: calc(100vw - 1rem);
+        max-height: calc(100dvh - 1.5rem);
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    dialog[open] .modal-content {
+        transform: translateX(-50%) scale(1);
+    }
+
     .collab-modal {
         padding: 1.4rem;
     }
