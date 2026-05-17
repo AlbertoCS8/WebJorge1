@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jorge - Free Walking Tours in Amsterdam. Discover the city with an experienced local guide."
+      content="Jorge - Walking Tours in Amsterdam. Discover the city with an experienced local guide."
     />
-    <meta property="og:title" content="Jorge - Amsterdam Free Walking Tours" />
+    <meta property="og:title" content="Jorge - Amsterdam Walking Tours" />
     <meta
       property="og:description"
-      content="Join Jorge for an unforgettable free walking tour through Amsterdam"
+      content="Join Jorge for an unforgettable walking tour through Amsterdam"
     />
     <meta property="og:type" content="website" />
-    <title>Jorge - Amsterdam Free Walking Tours</title>
+    <title>Jorge - Amsterdam Walking Tours</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -30,7 +30,8 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container">
-        <div class="nav-brand">Amsterdam tours</div>
+        <!-- <div class="nav-brand">Amsterdam tours</div> -->
+         <a href="#home"><img class="nav-brand" src="images/NUEVO-MUNDO_LOGO5.svg" alt="Amsterdam tours logo"></a>
           <div class="lang-switcher-mv">
           <button class="lang-btn active" data-lang="en">EN</button>
           <span class="lang-divider">|</span>
@@ -43,33 +44,42 @@
         </button>
         <ul class="nav-menu">
           <li>
-            <a href="#home" class="nav-link" data-en="Home" data-es="Inicio"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a href="#about" class="nav-link" data-en="About" data-es="Sobre mí"
-              >About</a
-            >
-          </li>
-          <li>
-            <a href="#tours" class="nav-link" data-en="Tours" data-es="Tours"
+            <a href="#tours" class="nav-link nav-link-strong" data-en="Tours" data-es="Tours"
               >Tours</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-en="About me" data-es="Sobre mí"
+              >About me</a
+            >
+          </li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-link nav-link-button nav-dropdown-toggle" data-en="Services" data-es="Servicios" aria-expanded="false"
+              >Services</button
+            >
+            <ul class="nav-submenu">
+              <li>
+                <a href="media-service.html" class="nav-link nav-sublink" data-en="Media" data-es="Medios">Media</a>
+              </li>
+              <li>
+                <a href="private-tour.html" class="nav-link nav-sublink" data-en="Custom Tour" data-es="Tour a medida">Custom Tour</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="nosotros.html" class="nav-link" data-en="About us" data-es="Nosotros"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a onclick="window.modal3.showModal()" class="nav-link" data-en="Contact" data-es="Contacto" style="cursor: pointer;"
+              >Contact</a
             >
           </li>
           <li>
             <a href="#faq" class="nav-link" data-en="FAQ" data-es="FAQ"
               >FAQ</a
             >
-          </li>
-          <li>
-            <a onclick="window.modal3.showModal()" class="nav-link" data-en="Contact" data-es="Contacto" style="cursor: pointer;"
-              >Contact me </a
-            >
-          </li>
-          <li class="nav-link">
-            <a onclick="window.modal4.showModal()" class="nav-link" data-en="Social media" data-es="Redes sociales"
-              >Social media</a>
           </li>
         </ul>
         <div class="lang-switcher">
@@ -78,7 +88,7 @@
           <button class="lang-btn" data-lang="es">ES</button>
         </div>
         <!-- <button href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="instagram-btn"> -->
-        <button onclick="window.modal1.showModal()" class="instagram-btn">
+        <button onclick="window.modal1.showModal()" class="instagram-btn" data-en="My social media" data-es="Mis redes sociales">
           <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg> -->
@@ -99,17 +109,17 @@
         </h1>
         <p
           class="hero-subtitle"
-          data-en="Free Walking Tours • Local Expert • Unforgettable Experiences"
-          data-es="Tours Gratuitos a Pie • Experto Local • Experiencias Inolvidables"
+          data-en="Walking Tours • Local Expert • Unforgettable Experiences"
+          data-es="Tours a Pie • Experto Local • Experiencias Inolvidables"
         >
-          Free Walking Tours • Local Expert • Unforgettable Experiences
+          Walking Tours • Local Expert • Unforgettable Experiences
         </p>
         <div class="hero-cta">
           <a
             class="btn btn-CTA"
             href="#tours"
-            data-en="Book Your Tour"
-            data-es="Reserva tu Tour"
+            data-en="Book a Tour"
+            data-es="Reserva un Tour"
             data-structured="true"
             
           >
@@ -143,75 +153,6 @@
 
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <h2 class="section-title" data-en="About Jorge" data-es="Sobre mi">
-          About me
-        </h2>
-        <div class="about-content">
-          <div class="about-image">
-            <img src="images/Jorge.jpg" alt="Jorge - Amsterdam Tour Guide" />
-          </div>
-          <div class="about-text">
-            <p
-              class="translate"
-              data-en="My name is Jorge and we are going to enjoy together a dynamic, fun, and above all interesting tour! I am originally from Madrid, Spain. Passionate about history and the world of travel. I stand out for making you see the city in a different way. If I live in Amsterdam, it is because of a love story. In this case, I did not fall in love with a woman... I fell in love with the city. It was the year 2008. As a child, I was taking a trip in Belgium with my parents visiting the main cities. One day we decided to escape to Amsterdam. On this trip, I was able to see the city for a day and I certainly fell in love. Sixteen years have passed since that moment and today I live in this city which I am completely in love with, as well as its history, its streets, and its people. I hope to make you vibrate on this tour. We will discover together the past and present of Amsterdam. Join me on this adventure. We will have a great time!"
-              data-es="Mi nombre es Jorge y vamos a disfrutar juntos de un tour dinámico, divertido y sobre todo ¡interesante! Soy originario de Madrid, España. Apasionado de la historia y del mundo de los viajes. Me destaco por hacerte ver la ciudad de una forma diferente. Si vivo en Ámsterdam es por una historia de amor. En este caso no me enamoré de una mujer...me enamoré de la ciudad. Corría el año 2008. Siendo un niño estaba haciendo un viaje en Bélgica con mis padres visitando las principales ciudades. Un día decidimos escaparnos a Ámsterdam. En este viaje pude ver la ciudad por un día y ciertamente me enamoré. Han pasado 16 años de aquel momento y hoy vivo en esta ciudad de la cual estoy completamente enamorado, así como de su historia, sus calles y su gente. Espero hacerte vibrar en este tour. Descubriremos juntos el pasado y presente de Ámsterdam. Acompáñame en esta aventura. ¡Lo pasaremos en grande!"
-            >
-              My name is Jorge and we are going to enjoy together a dynamic,
-              fun, and above all interesting tour! I am originally from Madrid,
-              Spain. Passionate about history and the world of travel. I stand
-              out for making you see the city in a different way. If I live in
-              Amsterdam, it is because of a love story. In this case, I did not
-              fall in love with a woman... I fell in love with the city. It was
-              the year 2008. As a child, I was taking a trip in Belgium with my
-              parents visiting the main cities. One day we decided to escape to
-              Amsterdam. On this trip, I was able to see the city for a day and
-              I certainly fell in love. Sixteen years have passed since that
-              moment and today I live in this city which I am completely in love
-              with, as well as its history, its streets, and its people. I hope
-              to make you vibrate on this tour. We will discover together the
-              past and present of Amsterdam. Join me on this adventure. We will
-              have a great time!
-            </p>
-            <p
-              class="translate"
-              data-en="My tours are free (tips appreciated!) and designed to give you an authentic Amsterdam experience. Whether you're interested in history, culture, or just finding the best local spots, I've got you covered."
-              data-es="Mis tours son gratuitos (¡las propinas son bien recibidas!) y están diseñados para brindarte una experiencia auténtica de Ámsterdam. Ya sea que te interese la historia, la cultura o simplemente encontrar los mejores lugares locales, te tengo cubierto."
-            >
-              My tours are free (tips appreciated!) and designed to give you an
-              authentic Amsterdam experience. Whether you're interested in
-              history, culture, or just finding the best local spots, I've got
-              you covered.
-            </p>
-            <p
-              class="translate"
-              data-en="Join me for a walk you won't forget!"
-              data-es="¡Únete a mí para un paseo que no olvidarás!"
-            >
-              Join me for a walk you won't forget!
-            </p>
-            <a
-              href="https://www.guruwalk.com/es/walks/55851-lo-imprescindible-de-amsterdam?ref=xzultqg5mc11fmbxnexk"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-              data-en="Book now"
-              data-es="Reserva ya"
-            >
-              Reserva ya
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Decorative Image -->
-    <div class="decorative-image-container">
-      <img src="https://res.cloudinary.com/dky2dtykl/image/upload/q_auto/f_auto/v1777752953/FOTON_1_aa2fix.jpg" alt="Amsterdam canals" class="decorative-img" />
-    </div>
-
     <!-- Tours Section -->
     <section id="tours" class="tours">
       <div class="container">
@@ -239,47 +180,47 @@
           <div class="tour-card">
             <h3
               class="translate"
-              data-en="Free Amsterdam Tour"
-              data-es="Tour Gratuito de Ámsterdam"
+              data-en="Amsterdam Essentials Tour"
+              data-es="Lo imprescindible de Amsterdam"
             >
-              Free Amsterdam Tour
+              Lo imprescindible de Amsterdam
             </h3>
             <p
               class="translate"
-              data-en="Explore the historic center, canals, and iconic landmarks of Amsterdam."
-              data-es="Explora el centro histórico, los canales y los lugares emblemáticos de Ámsterdam."
+              data-en="A dynamic introduction to Amsterdam through its history, local culture and must-see corners."
+              data-es="Una introducción dinámica a Ámsterdam a través de su historia, su cultura local y sus rincones imprescindibles."
             >
-              Explore the historic center, canals, and iconic landmarks of
-              Amsterdam.
+              Una introducción dinámica a Ámsterdam a través de su historia, su
+              cultura local y sus rincones imprescindibles.
             </p>
             <ul class="tour-highlights">
               <li
                 class="translate"
-                data-en="Duration: 2-3 hours"
-                data-es="Duración: 2-3 horas"
+                data-en="Duration: 2 hours"
+                data-es="Duración: 2 horas"
               >
-                Duration: 2-3 hours
+                Duración: 2 horas
               </li>
               <li
                 class="translate"
-                data-en="Dam Square & Royal Palace"
-                data-es="Plaza Dam y Palacio Real"
+                data-en="History and secrets of Amsterdam"
+                data-es="Historia y secretos de Ámsterdam"
               >
-                Dam Square & Royal Palace
+                Historia y secretos de Ámsterdam
               </li>
               <li
                 class="translate"
-                data-en="Red Light District history"
-                data-es="Historia del Barrio Rojo"
+                data-en="Local culture and curiosities"
+                data-es="Cultura local y curiosidades"
               >
-                Red Light District history
+                Cultura local y curiosidades
               </li>
               <li
                 class="translate"
-                data-en="Canal Ring UNESCO site"
-                data-es="Anillo de Canales UNESCO"
+                data-en="Dynamic and entertaining tour"
+                data-es="Tour dinámico y entretenido"
               >
-                Canal Ring UNESCO site
+                Tour dinámico y entretenido
               </li>
             </ul>
             <div style="width: 100%; text-align: center; margin-top: auto; margin-bottom: 2rem;">
@@ -296,17 +237,17 @@
           <div class="tour-card">
             <h3
               class="translate"
-              data-en="Hidden Gems Tour"
-              data-es="Tour de Gemas Ocultas"
+              data-en="The Jewish Quarter of Amsterdam"
+              data-es="El barrio judio de amsterdam"
             >
-              Hidden Gems Tour
+              El barrio judio de amsterdam
             </h3>
             <p
               class="translate"
-              data-en="Discover the secret spots and local favorites off the beaten path."
-              data-es="Descubre los lugares secretos y favoritos locales fuera de lo común."
+              data-en="Jewish life before, during and after the occupation."
+              data-es="La vida judía antes, durante y después de la ocupación."
             >
-              Discover the secret spots and local favorites off the beaten path.
+              La vida judía antes, durante y después de la ocupación.
             </p>
             <ul class="tour-highlights">
               <li
@@ -318,24 +259,24 @@
               </li>
               <li
                 class="translate"
-                data-en="Local neighborhoods"
-                data-es="Barrios locales"
+                data-en="Jewish history of Amsterdam"
+                data-es="Historia judía de Ámsterdam"
               >
-                Local neighborhoods
+                Historia judía de Ámsterdam
               </li>
               <li
                 class="translate"
-                data-en="Best cafes & restaurants"
-                data-es="Mejores cafés y restaurantes"
+                data-en="Second World War and memory"
+                data-es="Segunda Guerra Mundial y memoria"
               >
-                Best cafes & restaurants
+                Segunda Guerra Mundial y memoria
               </li>
               <li
                 class="translate"
-                data-en="Authentic Amsterdam life"
-                data-es="Vida auténtica de Ámsterdam"
+                data-en="Stories of resistance and survival"
+                data-es="Historias de resistencia y supervivencia"
               >
-                Authentic Amsterdam life
+                Historias de resistencia y supervivencia
               </li>
             </ul>
             <div style="width: 100%; text-align: center; margin-top: auto; margin-bottom: 2rem;">
@@ -447,64 +388,127 @@
 <div class="tour-card">
   <h3
     class="translate"
-    data-en="Media & Content Creator Tours"
-    data-es="Tours para Medios y Creadores de Contenido"
+    data-en="Private Tour"
+    data-es="Tour Privado"
   >
-    Media & Content Creator Tours
+    Tour Privado
   </h3>
   <p
     class="translate"
-    data-en="Special tours designed for influencers, filmmakers and content creators looking for the best stories and visuals in Amsterdam."
-    data-es="Tours especiales diseñados para influencers, cineastas y creadores de contenido que buscan las mejores historias y escenarios en Ámsterdam."
+    data-en="A fully personalized experience to discover Amsterdam at your own pace with a local guide in Spanish."
+    data-es="Una experiencia totalmente personalizada para descubrir Ámsterdam a tu ritmo con un guía local en español."
   >
-    Special tours designed for influencers, filmmakers and content creators looking for the best stories and visuals in Amsterdam.
+    Una experiencia totalmente personalizada para descubrir Ámsterdam a tu
+    ritmo con un guía local en español.
   </p>
   <ul class="tour-highlights">
     <li
       class="translate"
-      data-en="Best filming locations"
-      data-es="Mejores localizaciones para grabar"
+      data-en="100% personalized tour"
+      data-es="Tour 100% personalizado"
     >
-      Best filming locations
+      Tour 100% personalizado
     </li>
     <li
       class="translate"
-      data-en="Historical storytelling for content"
-      data-es="Storytelling histórico para contenido"
+      data-en="Exclusive and personal experience"
+      data-es="Experiencia exclusiva y cercana"
     >
-      Historical storytelling for content
+      Experiencia exclusiva y cercana
     </li>
     <li
       class="translate"
-      data-en="Flexible timing for shoots"
-      data-es="Horario flexible para grabaciones"
+      data-en="Amsterdam at your pace"
+      data-es="Ámsterdam a tu ritmo"
     >
-      Flexible timing for shoots
+      Ámsterdam a tu ritmo
     </li>
     <li
       class="translate"
-      data-en="Collaboration options"
-      data-es="Opciones de colaboración"
+      data-en="Local guide in Spanish"
+      data-es="Guía local en español"
     >
-      Collaboration options
+      Guía local en español
     </li>
   </ul>
   <div style="width: 100%; text-align: center; margin-top: auto; margin-bottom: 2rem;">
         <a
-            href="https://www.instagram.com/jorgemarinmarlasca/"
-            target="_blank"
+            href="private-tour.html"
             class="btn btn-primary btn-guru"
-              data-en="Contact me"
-              data-es="Contáctame"
-            >Contact me</a
+              data-en="Discover the private tour"
+              data-es="Descubre el tour privado"
+            >Discover the private tour</a
           >
           </div>
 </div>
 </div>
       
         <!-- Carousel Dots (Mobile/Tablet only) -->
-        <div class="tours-carousel-dots"></div>
+        <!-- <div class="tours-carousel-dots"></div>
         
+      </div> -->
+    </section>
+
+    <!-- Decorative Image -->
+    <div class="decorative-image-container">
+      <img src="https://res.cloudinary.com/dky2dtykl/image/upload/q_auto/f_auto/v1777752953/FOTON_1_aa2fix.jpg" alt="Amsterdam canals" class="decorative-img" />
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title" data-en="About Jorge" data-es="Sobre mi">
+          About me
+        </h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/DSC01739.jpg" alt="Jorge - Amsterdam Tour Guide" />
+          </div>
+          <div class="about-text">
+            <p
+              class="translate"
+              data-en="I'm Jorge, born in Madrid and a tour guide by vocation. I studied Advertising and Public Relations and arrived in Amsterdam in 2023 looking for a new professional and personal challenge. Since then, this city has been fascinating me more every day."
+              data-es="Soy Jorge, madrileño de nacimiento y guía turístico por vocación. Estudié Publicidad y Relaciones Públicas y llegué a Ámsterdam en 2023 buscando un nuevo reto profesional y personal. Desde entonces, esta ciudad me apasiona cada día más."
+            ></p>
+            <p
+              class="translate"
+              data-en="I love history, I enjoy talking to people and I love teaching Amsterdam in a close, elegant and different way."
+              data-es="Amo la historia, disfruto hablando con la gente y me encanta enseñar Ámsterdam de una forma cercana, elegante y diferente."
+            ></p>
+            <p
+              class="translate"
+              data-en="That's why I created Nuevo Mundo, a very personal project with which I want to offer tours of the highest quality, small groups and experiences carefully detailed. A project that also arises from my desire to build a future for my family. I want you to discover Amsterdam with me, but above all to feel it. Because when someone truly loves a city, it shows in the way they tell it."
+              data-es="Por eso he creado Nuevo Mundo, un proyecto muy personal con el que quiero ofrecer tours de máxima calidad, grupos reducidos y experiencias cuidadas al detalle. Un proyecto que nace también de mi deseo de construir un futuro para mi familia. Quiero que descubras Ámsterdam conmigo, pero sobre todo que la sientas. Porque cuando alguien ama de verdad una ciudad, se nota en la forma de contarla."
+            ></p>
+            <!-- <p
+              class="translate"
+              data-en="My tours are free (tips appreciated!) and designed to give you an authentic Amsterdam experience. Whether you're interested in history, culture, or just finding the best local spots, I've got you covered."
+              data-es="Mis tours son gratuitos (¡las propinas son bien recibidas!) y están diseñados para brindarte una experiencia auténtica de Ámsterdam. Ya sea que te interese la historia, la cultura o simplemente encontrar los mejores lugares locales, te tengo cubierto."
+            >
+              My tours are free (tips appreciated!) and designed to give you an
+              authentic Amsterdam experience. Whether you're interested in
+              history, culture, or just finding the best local spots, I've got
+              you covered.
+            </p>
+            <p
+              class="translate"
+              data-en="Join me for a walk you won't forget!"
+              data-es="¡Únete a mí para un paseo que no olvidarás!"
+            >
+              Join me for a walk you won't forget!
+            </p> -->
+            <a
+              href="https://www.guruwalk.com/es/walks/55851-lo-imprescindible-de-amsterdam?ref=xzultqg5mc11fmbxnexk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              data-en="Book now"
+              data-es="Reserva ya"
+            >
+              Reserva ya
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -539,82 +543,30 @@
       </div>
     </div>
 
-    <!-- Gallery Section -->
-    <!-- <section id="gallery" class="gallery">
-      <div class="container">
-        <h2
-          class="section-title"
-          data-en="Tour Moments"
-          data-es="Momentos del Tour"
-        >
-          Tour Moments
-        </h2>
-
-        <div class="carousel-container">
-          <div class="carousel-wrapper">
-            <div class="carousel-track">
-              <div class="carousel-slide">
-                <img src="images/amsterdam1.webp" alt="Amsterdam tour moment" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/amsterdam3.jpg" alt="Amsterdam tour moment" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/amsterdam4.jpg" alt="Amsterdam tour moment" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/amsterdam5.jpg" alt="Amsterdam tour moment" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/fotoJorge1.webp" alt="Amsterdam tour moment" />
-              </div>
-            </div>
-          </div>
-
-           Navigation Buttons 
-          <button
-            class="carousel-btn carousel-btn-prev"
-            aria-label="Previous slide"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-          <button
-            class="carousel-btn carousel-btn-next"
-            aria-label="Next slide"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-
-          Dots Indicator 
-          <div class="carousel-dots"></div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- FAQ Section -->
     <section id="faq" class="faq">
       <div class="container">
         <h2 class="section-title" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">
           Frequently Asked Questions
         </h2>
+        <div class="faq-search-shell">
+          <label class="faq-search-label" for="faq-search" data-en="Search by word" data-es="Busca por palabra">Search by word</label>
+          <div class="faq-search-bar">
+            <input
+              type="search"
+              id="faq-search"
+              class="faq-search-input"
+              data-faq-search
+              data-placeholder-en="Search for words related to your question"
+              data-placeholder-es="Busca por palabras relacionadas a su pregunta"
+              placeholder="Search for words related to your question"
+            />
+          </div>
+          <p class="faq-search-status" data-faq-search-status aria-live="polite"></p>
+          <p class="faq-search-empty" data-faq-search-empty data-en="No FAQs contain that word." data-es="Ninguna pregunta contiene esa palabra." hidden>
+            No FAQs contain that word.
+          </p>
+        </div>
         <div class="faq-container">
           
           <!-- FAQ Item 1 -->
@@ -827,7 +779,7 @@
             </summary>
             <div class="faq-answer">
               <p class="translate" data-en="Yes, it's possible to do a private tour. If you're interested, contact us by clicking here. Write to us and we'll organize the tour to be a comfortable, exclusive experience adapted to your group's needs." data-es="Sí, es posible realizar un tour privado. Si estás interesado, ponte en contacto con nosotros haciendo clic aquí. Escríbenos y organizaremos el recorrido para que sea una experiencia cómoda, exclusiva y adaptada a las necesidades de tu grupo.">
-                Sí, es posible realizar un tour privado. Si estás interesado, ponte en contacto con nosotros haciendo clic <span class="faq-link" onclick="window.modal3.showModal()" style="cursor: pointer;">aquí</span>. Escríbenos y organizaremos el recorrido para que sea una experiencia cómoda, exclusiva y adaptada a las necesidades de tu grupo.
+                Sí, es posible realizar un tour privado. Si estás interesado, visita <a class="faq-link" href="private-tour.html">esta página</a>. Desde ahí podrás contarnos lo que buscas y organizaremos el recorrido para que sea una experiencia cómoda, exclusiva y adaptada a las necesidades de tu grupo.
               </p>
             </div>
           </details>
@@ -910,15 +862,26 @@
             target="_blank"
             >WhatsApp</a
           > -->
-          <a href="https://www.youtube.com/@JorgeMar%C3%ADnMarlascaEN" target="_blank" class="social youtube">YouTube</a>
+          <!-- <a
+  href="https://instagram.com/default"
+  data-en="https://instagram.com/englishAccount"
+  data-es="https://instagram.com/spanishAccount"
+  target="_blank"
+  class="social instagram language-link"
+>
+  Instagram
+</a> -->
           <a
             href="https://www.instagram.com/jorgemarinmarlasca/"
+            data-en="https://www.instagram.com/jorgemarinmarlascaen/"
+            data-es="https://www.instagram.com/jorgemarinmarlasca/"
             target="_blank"
-            class="social instagram"
+            class="social instagram language-link"
             >Instagram</a
           >
-          <a  href="https://www.facebook.com/jorgemarinmarlasca" target="_blank" class="social facebook">Facebook</a>
-          <a href="https://www.tiktok.com/@jorgemarinmarlascaen" target="_blank" class="social tiktok">TikTok</a>
+          <a href="https://www.youtube.com/@JorgeMar%C3%ADnMarlasca" data-en="https://www.youtube.com/@JorgeMar%C3%ADnMarlascaen" data-es="https://www.youtube.com/@JorgeMar%C3%ADnMarlasca" target="_blank" class="social youtube language-link">YouTube</a>
+          <a  href="https://www.facebook.com/jorgemarinmarlasca" data-en="https://www.facebook.com/jorgemarinmarlascaen" data-es="https://www.facebook.com/jorgemarinmarlasca" target="_blank" class="social facebook language-link">Facebook</a>
+          <a href="https://www.tiktok.com/@jorgemarinmarlascaen" data-en="https://www.tiktok.com/@jorgemarinmarlascaen" data-es="https://www.tiktok.com/@jorgemarinmarlasca" target="_blank" class="social tiktok language-link">TikTok</a>
           <!-- <a href="mailto:collantessanchezalberto@gmail.com" class="social email">Email</a> -->
           <!-- <a
             href="mailto:jorgemarinmarlasca@gmail.com?subject=Informaci%C3%B3n%20sobre%20tours&body=Hola%20buenas%20quer%C3%ADa%20reservar%20un%20tour"
@@ -963,7 +926,7 @@
     <!-- Modal para contacto directo, con email y whatsapp -->
      <dialog id="modal3">
       <div class="modal-content">
-        <h2 data-en="You have doubts? Contact me through:" data-es="¿Tienes dudas? Contacta conmigo a través de:">You have doubts? Contact me through:</h2>
+        <h2 data-en="Contact me through:" data-es="Contacta conmigo a través de:">Contact me through:</h2>
         
                 <div class="social-grid">
                   <a class="social email" onclick="window.location.href='mailto:jorgemarinmarlasca@gmail.com'" data-en="Email" data-es="Correo electrónico">Email</a>
@@ -976,7 +939,7 @@
       </div>
     </dialog>
     <!-- Modal para hacer colaboraciones con empresas o influencers -->
-     <dialog id="modal4">
+     <!-- <dialog id="modal4">
       <div class="modal-content collab-modal">
         <span class="collab-tag" data-en="For creators, brands and storytellers" data-es="Para creadores, marcas y storytellers">For creators, brands and storytellers</span>
         <h2 data-en="Are you an influencer, filmmaker or brand?" data-es="¿Eres influencer, filmmaker o una marca?">Are you an influencer, filmmaker or brand?</h2>
@@ -1004,7 +967,7 @@
           Close
         </button>
       </div>
-    </dialog>
+    </dialog> -->
     </section>
 
     <!-- Footer -->
@@ -1027,14 +990,14 @@
       </div>
     </footer>
 
-    <a
+    <!-- <a
       href="https://wa.me/+34662226546"
       target="_blank"
       rel="noopener noreferrer"
-    >
-      <!-- <img src="images/logo_whats.png" alt="WhatsApp" class="logo-whatsapp"> -->
-      <img src="https://res.cloudinary.com/dky2dtykl/image/upload/q_auto/f_auto/v1777752969/whatsapp_1_v636wm.png" alt="WhatsApp" class="logo-whatsapp" />
-    </a>
+    > -->
+    <!-- <!data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M3.516 3.516c4.686-4.686 12.284-4.686 16.97 0s4.686 12.283 0 16.97a12 12 0 0 1-13.754 2.299l-5.814.735a.392.392 0 0 1-.438-.44l.748-5.788A12 12 0 0 1 3.517 3.517zm3.61 17.043.3.158a9.85 9.85 0 0 0 11.534-1.758c3.843-3.843 3.843-10.074 0-13.918s-10.075-3.843-13.918 0a9.85 9.85 0 0 0-1.747 11.554l.16.303-.51 3.942a.196.196 0 0 0 .219.22zm6.534-7.003-.933 1.164a9.84 9.84 0 0 1-3.497-3.495l1.166-.933a.79.79 0 0 0 .23-.94L9.561 6.96a.79.79 0 0 0-.924-.445l-2.023.524a.797.797 0 0 0-.588.88 11.754 11.754 0 0 0 10.005 10.005.797.797 0 0 0 .88-.587l.525-2.023a.79.79 0 0 0-.445-.923L14.6 13.327a.79.79 0 0 0-.94.23z'/%3E%3C/svg%3E -->
+    <!-- <img src="images/logo_whats.png" alt="WhatsApp" class="logo-whatsapp"> -->
+     <a href="https://wa.me/+3462226546" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 32 32" class="whatsapp-ico"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd"></path></svg></a>
     <script src="js/main.js"></script>
   </body>
 </html>
