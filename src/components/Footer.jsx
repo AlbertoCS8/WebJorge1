@@ -1,30 +1,18 @@
+import { useLanguage } from '../context/LanguageContext'
+
 export function Footer() {
+  const { t } = useLanguage()
+
   return (
-    <footer className="site-footer">
-      <div className="container footer-shell">
-        <p>© 2026 Jorge Marin Marlasca. Todos los derechos reservados.</p>
-        <div className="footer-links">
-          <a
-            href="mailto:jorgemarinmarlasca@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Email
-          </a>
-          <a
-            href="https://wa.me/34662226546"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
-          <a
-            href="https://www.instagram.com/jorgemarinmarlasca/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-shell">
+          <div className="footer-inline">
+            <p className="footer-meta">
+              &copy; 2026 Jorge Marin Marlasca{' '}
+              <span>{t('Todos los derechos reservados.', 'All rights reserved.')}</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

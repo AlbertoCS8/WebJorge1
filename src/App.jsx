@@ -1,19 +1,34 @@
+import { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { LegacyPage } from './pages/LegacyPage'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { SiteLayout } from './components/SiteLayout'
+import { AboutUsPage } from './pages/AboutUsPage'
+import { HomePage } from './pages/HomePage'
+import { MediaServicePage } from './pages/MediaServicePage'
+import { PrivateTourPage } from './pages/PrivateTourPage'
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: false,
+      mirror: true,
+      offset: 20,
+    })
+
+    AOS.refreshHard()
+  }, [])
+
   return (
     <Routes>
-      <Route path="/" element={<LegacyPage src="/legacy/index.html" title="Inicio" />} />
-      <Route
-        path="/media-service"
-        element={<LegacyPage src="/legacy/media-service.html" title="Media Service" />}
-      />
-      <Route
-        path="/private-tour"
-        element={<LegacyPage src="/legacy/private-tour.html" title="Private Tour" />}
-      />
-      <Route path="/nosotros" element={<LegacyPage src="/legacy/nosotros.html" title="Nosotros" />} />
+      <Route element={<SiteLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/media-service" element={<MediaServicePage />} />
+        <Route path="/private-tour" element={<PrivateTourPage />} />
+        <Route path="/nosotros" element={<AboutUsPage />} />
+      </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

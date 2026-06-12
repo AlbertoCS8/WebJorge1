@@ -6,16 +6,23 @@ export function HashScroller() {
 
   useEffect(() => {
     if (!location.hash) {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.scrollTo({ top: 0, behavior: 'auto' })
       return
     }
 
     const targetId = location.hash.replace('#', '')
-    const target = document.getElementById(targetId)
+    const scrollToHash = () => {
+      const target = document.getElementById(targetId)
 
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
+
+    scrollToHash()
+    const timerId = window.setTimeout(scrollToHash, 120)
+
+    return () => window.clearTimeout(timerId)
   }, [location])
 
   return null
